@@ -25,10 +25,6 @@
 
 </head>
 <body>
-    {{ dump(Session::has('flashy_notification.message')) }}
-    @if(Session::has('flashy_notification.message'))
-    {{ dd("error") }}
-    @endif
 
     <div class="header">
         <div class="header-left">
