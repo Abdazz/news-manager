@@ -1,0 +1,30 @@
+{
+    "name": "abdazz/posts-manager",
+    "description": "This package allow you to manage setup posts sysem",
+    "authors": [
+        {
+            "name": "abdoul",
+            "email": "abdoulazizzorom@gmail.com"
+        }
+    ],
+    "require": {
+        "mercuryseries/flashy": "^1.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Abdazz\\PostsManager\\PostsManagerServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Abdazz\\PostsManager\\": "src/"
+        },
+        "files": [
+            "/helpers/app.php"
+        ]
+    }
+
+
+}
