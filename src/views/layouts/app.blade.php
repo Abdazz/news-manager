@@ -4,20 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
     <script src="{{ asset('vendor/posts-manager/js/app.js') }}" defer></script>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/slicknav.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/fontawesome-all.css') }}">
     <link href="{{ asset('vendor/posts-manager/css/app.css') }}" rel="stylesheet">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -33,7 +27,6 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('posts.index') }}">Nos Posts</a>
@@ -43,11 +36,9 @@
                         </li>
                     </ul>
 
-                    <!-- Right Side Of Navbar -->
 
                     <ul class="navbar-nav ">
 
-                        <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -97,8 +88,6 @@
 
     <script src="{{ asset('js/jquery-1.12.4.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('js/js/wow.min.js') }}"></script>
     @yield('script')
     @include('flashy::message')
 

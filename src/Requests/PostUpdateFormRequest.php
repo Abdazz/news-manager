@@ -26,7 +26,7 @@ class PostUpdateFormRequest extends FormRequest
             "title"=>"required|min:5|max:255|unique:posts,title,".$this->post,
             "category_id"=>"required|numeric",
             "content"=>"required|min:5|max:5000",
-            "slug"=>"nullable|numeric|min:500|max:50000",
+            "slug"=>"nullable|min:5|max:50000",
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];
     }

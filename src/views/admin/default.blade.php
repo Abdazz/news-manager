@@ -26,51 +26,18 @@
 </head>
 <body>
 
-    <div class="header">
-        <div class="header-left">
-            <div class="menu-icon dw dw-menu"></div>
-            <div class="search-toggle-icon dw dw-search2" data-toggle="header_search"></div>
-        </div>
-        <div class="header-right">
-
-            <div class="user-info-dropdown">
-                <div class="dropdown">
-                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-                        <span class="user-icon">
-                            <i class="dw dw-user1"></i>
-                        </span>
-                        {{-- <span class="user-name">{{ Auth::user()->name }}</span> --}}
-                    </a>
-                    {{-- <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-                        <a class="dropdown-item" href="{{ route('profile') }}">
-                            Profil
-                        </a>
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
-
-                            Déconnexion
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </div> --}}
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="left-side-bar">
         <div class="brand-logo">
-            <a href="index.html">
-                <h2 class="text-white">{{ config('app.name', 'Laravel') }}</h2>
+            <a href="{{ route('admin.index') }}">
+                <h4 class="text-white">{{ config('app.name', 'Laravel') }}</h4>
             </a>
             <div class="close-sidebar" data-toggle="left-sidebar-close">
                 <i class="ion-close-round"></i>
             </div>
         </div>
         <div class="menu-block customscroll">
-            <div class="sidebar-menu">
+            <div style="padding-top: 20px;" class="sidebar-menu">
                 <ul id="accordion-menu">
                     <li>
                         <a href="{{ route('admin.index') }}" class="dropdown-toggle no-arrow">
@@ -106,9 +73,6 @@
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
-    {{-- <script src="{{ asset('vendor/posts-manager/js/core.js') }}"></script> --}}
-    {{-- <script src="{{ asset('vendor/posts-manager/js/script.min.js') }}"></script> --}}
 
     @yield('script')
     <script src="//code.jquery.com/jquery.js"></script>

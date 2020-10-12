@@ -12,7 +12,6 @@
             </div>
         </div>
     </div>
-    <!-- Simple Datatable start -->
 @include("posts-manager::admin.posts-list")
 
 @endsection

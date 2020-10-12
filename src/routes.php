@@ -1,8 +1,7 @@
 <?php
-Route::get("test-email", function(){
-return new Abdazz\PostsManager\Mail\PostCreated(3, "Nouveau article");
-});
-Auth::routes();
+// Route::get("test-email", function(){
+// return new Abdazz\PostsManager\Mail\PostCreated(3, "Nouveau article");
+// });
 
 Route::resource('categories', 'Abdazz\PostsManager\CategoryController');
 

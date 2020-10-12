@@ -11,10 +11,6 @@
             </div>
             <div class="mt-10">
                 <div>
-                    {{-- <form id="delete-form" action="{{ route('categories.destroy', $category) }}" method="POST" class="d-none">
-                        @csrf
-                        {{ method_field("DELETE") }}
-                    </form> --}}
 
                 </div>
                 <div>

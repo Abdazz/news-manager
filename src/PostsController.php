@@ -5,10 +5,9 @@ namespace Abdazz\PostsManager;
 use Abdazz\PostsManager\Mail\PostCreated;
 use Abdazz\PostsManager\Models\Category;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\PostUpdateFormRequest;
 use Abdazz\PostsManager\Models\Post;
 use Abdazz\PostsManager\Requests\PostFormRequest;
-use Abdazz\PostsManager\Requests\PostUpdateFormRequest as RequestsPostUpdateFormRequest;
+use Abdazz\PostsManager\Requests\PostUpdateFormRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use MercurySeries\Flashy\Flashy;
@@ -59,7 +58,6 @@ class PostsController extends Controller
      */
     public function store(PostFormRequest $request)
     {
-
         if(!empty($request->image)){
             $imageName = time().'.'.$request->image->extension();
             $request->image->move(public_path('vendor/posts-manager/images'), $imageName);
@@ -86,8 +84,6 @@ class PostsController extends Controller
 
     public function show( $post)
     {
-
-
         $post=Post::with("category")->where("id", $post)->first();
         return view("posts-manager::posts.show", compact("post"));
     }
@@ -101,9 +97,8 @@ class PostsController extends Controller
     }
 
 
-    public function update(RequestsPostUpdateFormRequest $request, $post)
+    public function update(PostUpdateFormRequest $request, $post)
     {
-
         $post=Post::with("category")->where("id", $post)->first();
 
         if(!empty($request->image)){
