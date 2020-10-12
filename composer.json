@@ -1,6 +1,6 @@
 {
     "name": "abdazz/posts-manager",
-    "description": "This package allow you to manage setup posts sysem",
+    "description": "This package allow you to setup a posts system",
     "authors": [
         {
             "name": "abdoul",
