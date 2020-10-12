@@ -4,7 +4,6 @@
 <div class="card-box mb-30">
 
     <div class="pb-20">
-
         <table class="data-table table stripe hover nowrap">
             <thead>
                 <tr>
@@ -16,7 +15,6 @@
             </thead>
             <tbody>
                 @php
-
                     $id=0;
                 @endphp
                 @foreach($categories as $category)

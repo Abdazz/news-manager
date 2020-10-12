@@ -50,10 +50,12 @@
     <div class="main-container">
         <div class="pd-ltr-20">
             <div class="min-height-200px">
+                @include('flash::message')
             @yield('content')
             </div>
         </div>
     </div>
+
     <footer style="margin-top: 200px;">
         <div class="footer-copy-right">
             <p class="text-center">
@@ -65,8 +67,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
     @yield('script')
-    <script src="//code.jquery.com/jquery.js"></script>
-    @include('flashy::message')
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+        $('#flash-overlay-modal').modal();
+    </script>
     <script>
         $('#datepicker').datepicker({
             uiLibrary: 'bootstrap4'
@@ -74,3 +78,4 @@
     </script>
 </body>
 </html>
+.

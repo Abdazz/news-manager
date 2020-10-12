@@ -1,6 +1,6 @@
 <?php
 
-namespace Abdazz\PostsManager;
+namespace Abdazz\PostsManager\Http\Controllers;
 
 use Abdazz\PostsManager\Mail\CategoryCreated;
 use Abdazz\PostsManager\Models\Category;
