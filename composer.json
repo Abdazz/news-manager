@@ -22,7 +22,7 @@
             "Abdazz\\PostsManager\\": "src/"
         },
         "files": [
-            "/helpers/app.php"
+            "src/helpers/helpers.php"
         ]
     }
 
