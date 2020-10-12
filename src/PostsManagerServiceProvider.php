@@ -14,7 +14,6 @@ class PostsManagerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->make('Abdazz\PostsManager\PostsManagerController');
         $this->loadViewsFrom(__DIR__.'/views', 'posts-manager');
     }
 
